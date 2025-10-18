@@ -21,7 +21,7 @@ const deployRaffle: DeployFunction = async function (
   let subscriptionId: bigint | string | undefined;
 
   if (developmentChains.includes(network.name) || chainId === 31337) {
-    const vrfCoordinatorDeployment = await deployments.get(
+    const vrfCoordinatorDeployment = await deployments.get( 
       "VRFCoordinatorV2Mock"
     );
     const deployerSigner = await ethers.getSigner(deployer);

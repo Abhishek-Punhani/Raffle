@@ -1,4 +1,5 @@
-import { ethers, network } from "hardhat";
+import { network } from "hardhat";
+import { ethers } from "ethers";
 import { developmentChains } from "../helper-hardhat-config";
 
 const BASE_FEE=ethers.parseEther("0.25") //0.25 is the premium. It costs 0.25 LINK per request

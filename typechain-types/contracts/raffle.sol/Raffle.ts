@@ -29,6 +29,7 @@ export interface RaffleInterface extends Interface {
       | "checkUpkeep"
       | "enterRaffle"
       | "getEntranceFee"
+      | "getInterval"
       | "getLatestTimestamp"
       | "getNumWords"
       | "getNumberOfPlayers"
@@ -57,6 +58,10 @@ export interface RaffleInterface extends Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "getEntranceFee",
+    values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "getInterval",
     values?: undefined
   ): string;
   encodeFunctionData(
@@ -106,6 +111,10 @@ export interface RaffleInterface extends Interface {
   ): Result;
   decodeFunctionResult(
     functionFragment: "getEntranceFee",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "getInterval",
     data: BytesLike
   ): Result;
   decodeFunctionResult(
@@ -232,6 +241,8 @@ export interface Raffle extends BaseContract {
 
   getEntranceFee: TypedContractMethod<[], [bigint], "view">;
 
+  getInterval: TypedContractMethod<[], [bigint], "view">;
+
   getLatestTimestamp: TypedContractMethod<[], [bigint], "view">;
 
   getNumWords: TypedContractMethod<[], [bigint], "view">;
@@ -270,6 +281,9 @@ export interface Raffle extends BaseContract {
   ): TypedContractMethod<[], [void], "payable">;
   getFunction(
     nameOrSignature: "getEntranceFee"
+  ): TypedContractMethod<[], [bigint], "view">;
+  getFunction(
+    nameOrSignature: "getInterval"
   ): TypedContractMethod<[], [bigint], "view">;
   getFunction(
     nameOrSignature: "getLatestTimestamp"
