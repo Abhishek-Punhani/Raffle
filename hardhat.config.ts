@@ -6,6 +6,7 @@ import "hardhat-gas-reporter"
 import "dotenv/config"
 import "solidity-coverage"
 import "hardhat-deploy"
+import "@nomicfoundation/hardhat-ethers";
 
 const BASE_SEPOLIA_RPC_URL = process.env.BASE_SEPOLIA_RPC_URL 
 const PRIVATE_KEY = process.env.PRIVATE_KEY
