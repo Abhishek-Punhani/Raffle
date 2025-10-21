@@ -189,6 +189,7 @@ export namespace WinnerPickedEvent {
 }
 
 export interface Raffle extends BaseContract {
+  callStatic: any;
   connect(runner?: ContractRunner | null): Raffle;
   waitForDeployment(): Promise<this>;
 

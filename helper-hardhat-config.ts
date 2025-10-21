@@ -1,4 +1,4 @@
-import { ethers } from "hardhat";
+import { ethers } from "ethers";
 
 const networkConfig = {
   4: {
@@ -31,6 +31,11 @@ const networkConfig = {
   },
 };
 
-const developmentChains = ["hardhat", "localhost"];
+export const developmentChains = ["hardhat", "localhost"];
+export const VERIFICATION_BLOCK_CONFIRMATIONS = 6;
+export const frontEndContractsFile =
+  "../nextjs-smartcontract-lottery-fcc/constants/contractAddresses.json";
+export const frontEndAbiFile =
+  "../nextjs-smartcontract-lottery-fcc/constants/abi.json";
 
-export { networkConfig, developmentChains };
+export { networkConfig };
